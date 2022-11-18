@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search GitHub</title>
+  </head>
+  <body>
+    <form action="https://github.com/search" method="GET" target="_blank">
+      <!--name attribute=params q=typedText-->
+      <input type="text" name="q" required placeholder="Search GitHub" />
+      <p></p>
+
+      <!--name attribute=params s=starts/forks/updated-->
+      <label for="sortBy">sortBy</label>
+      <select name="s" id="sortBy" required>
+        <option value="stars">stars</option>
+        <option value="forks">forks</option>
+        <option value="updated">updated</option>
+      </select>
+      <p></p>
+
+      <!--name attribute=params o=desc/asc-->
+      <label for="desc">desc</label>
+      <input type="radio" name="o" id="desc" value="desc" required />
+
+      <label for="asc">asc</label>
+      <input type="radio" name="o" id="asc" value="asc" required />
+      <button type="submit">Search</button>
+    </form>
+  </body>
+</html>
